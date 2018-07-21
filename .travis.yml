@@ -3,7 +3,8 @@ dotnet: 2.0.0
 mono: none
 script: ./build.sh
 deploy:
-    provider: script
-    script: ./deploy.sh
-    on:
-        branch: master
+  skip_cleanup: true
+  provider: script
+  script: deploy.sh
+  on:
+    branch: master
