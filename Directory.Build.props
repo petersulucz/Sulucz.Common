@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<BuildDirectory Condition="'$(BuildDirectory)' == ''">$([System.IO.Path]::Combine($(MSBuildThisFileDirectory),'Build'))</BuildDirectory>
 		<StylecopDirectory Condition="'$(StylecopDirectory)' == ''">$([System.IO.Path]::Combine($(BuildDirectory),'Stylecop'))</StylecopDirectory>
+		<SignDirectory Condition="'$(SignDirectory)' == ''">$([System.IO.Path]::Combine($(BuildDirectory),'Signing'))</SignDirectory>
 	</PropertyGroup>
 
 </Project>

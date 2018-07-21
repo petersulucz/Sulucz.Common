@@ -31,13 +31,13 @@ do
 done
 
 # Now find all of the nuget packages.
-NugetPackages=$(find `pwd` -regex .*Sulucz\..*.*\.nupkg | grep -v '/obj/')
-for package in $NugetPackages
-do
-	echo "Pushing package $package"
-	
-	dotnet nuget push --api-key "$NUGET_API_KEY" --source 'https://www.nuget.org' $package
-	if [ $? -ne 0 ]; then
-		exit 1
-	fi
-done
+#NugetPackages=$(find `pwd` -regex .*Sulucz\..*.*\.nupkg | grep -v '/obj/')
+#for package in $NugetPackages
+#do
+#	echo "Pushing package $package"
+#	
+#	dotnet nuget push --api-key "$NUGET_API_KEY" --source 'https://www.nuget.org' $package
+#	if [ $? -ne 0 ]; then
+#		exit 1
+#	fi
+#done

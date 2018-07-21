@@ -8,4 +8,13 @@
     <PropertyGroup>
         <CodeAnalysisRuleSet>$([System.IO.Path]::Combine($(StylecopDirectory), 'default.ruleset'))</CodeAnalysisRuleSet>
     </PropertyGroup>
+
+	
+	<!-- Sign the assembly -->
+	<PropertyGroup>
+		<SignAssembly>true</SignAssembly>
+		<DelaySign>false</DelaySign>
+		<AssemblyOriginatorKeyFile Condition="'$(Configuration)' == 'Debug'">$([System.IO.Path]::Combine($(SignDirectory), 'debugkey.pfx'))</AssemblyOriginatorKeyFile>
+		<AssemblyOriginatorKeyFile Condition="'$(Configuration)' == 'Relase'">$([System.IO.Path]::Combine($(SignDirectory), 'publicsign.pfx'))</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
 </Project>
