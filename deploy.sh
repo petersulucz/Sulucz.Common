@@ -37,7 +37,7 @@ if [ "$TRAVIS_TAG" != "" ]; then
 
         echo "Packing project $projdir"
 
-        dotnet pack --version-suffix "'$postfix'" /p:version='$assemblyversion' $projdir
+        dotnet pack --version-suffix "'$postfix'" /p:version=$assemblyversion $projdir
         if [ $? -ne 0 ]; then
             exit 1
         fi
