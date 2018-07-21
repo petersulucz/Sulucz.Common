@@ -14,6 +14,9 @@ namespace Sulucz.Common.Datastructures
         /// </summary>
         private readonly Dictionary<int, Dictionary<int, T>> rows;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExpandableGrid{T}"/> class.
+        /// </summary>
         public ExpandableGrid()
         {
             this.rows = new Dictionary<int, Dictionary<int, T>>();
@@ -80,13 +83,51 @@ namespace Sulucz.Common.Datastructures
             }
         }
 
+        /// <summary>
+        /// Try to get the value at a row/column.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <param name="column">The column.</param>
+        /// <param name="value">The output value.</param>
+        /// <returns>True on success, and value is set. False otherwise, value is default.</returns>
         public bool TryGetValue(int row, int column, out T value)
         {
-            Dictionary<int, T> columns;
-            if (true == this.rows.TryGetValue(row, out columns)
+            if (true == this.rows.TryGetValue(row, out Dictionary<int, T> columns)
                 && true == columns.TryGetValue(column, out value))
             {
                 return true;
+            }
+
+            value = default(T);
+            return false;
+        }
+
+        /// <summary>
+        /// Remove at object at the row/column
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <param name="column">The column.</param>
+        /// <param name="value">The removed value if it existed.</param>
+        /// <returns>True if the object existed, false otherwise.</returns>
+        public bool Remove(int row, int column, out T value)
+        {
+            if (true == this.rows.TryGetValue(row, out Dictionary<int, T> columns))
+            {
+                // The row exists..
+                if (true == columns.TryGetValue(column, out value))
+                {
+                    // We got the value
+                    if (columns.Count > 1)
+                    {
+                        columns.Remove(column);
+                        return true;
+                    }
+
+                    // Drop the entire column.
+                    this.rows.Remove(row);
+
+                    return true;
+                }
             }
 
             value = default(T);

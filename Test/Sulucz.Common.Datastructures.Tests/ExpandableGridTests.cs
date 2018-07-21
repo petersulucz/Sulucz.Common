@@ -114,5 +114,30 @@ namespace Sulucz.Common.Datastructures.Tests
             var grid = new ExpandableGrid<object>();
             Assert.ThrowsException<KeyNotFoundException>(() => grid[0, 0]);
         }
+
+        /// <summary>
+        /// Test remove something which doesn't exist.
+        /// </summary>
+        [TestMethod]
+        public void TestRemoveEmpty()
+        {
+            var grid = new ExpandableGrid<object>();
+            Assert.IsFalse(grid.Remove(0, 0, out var value));
+            Assert.IsNull(value);
+        }
+
+        /// <summary>
+        /// Test remove something which doesn't exist.
+        /// </summary>
+        [TestMethod]
+        public void TestRemove()
+        {
+            var grid = new ExpandableGrid<object>();
+
+            var obj = new object();
+            grid[4, 8] = obj;
+            Assert.IsTrue(grid.Remove(4, 8, out var value));
+            Assert.AreSame(obj, value);
+        }
     }
 }
