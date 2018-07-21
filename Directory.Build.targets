@@ -8,4 +8,12 @@
     <PropertyGroup>
         <CodeAnalysisRuleSet>$([System.IO.Path]::Combine($(StylecopDirectory), 'default.ruleset'))</CodeAnalysisRuleSet>
     </PropertyGroup>
+
+    
+    <!-- Sign the assembly -->
+    <PropertyGroup>
+        <SignAssembly>true</SignAssembly>
+        <DelaySign>false</DelaySign>
+        <AssemblyOriginatorKeyFile>$([System.IO.Path]::Combine($(SignDirectory), 'releasekey.snk'))</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
 </Project>
