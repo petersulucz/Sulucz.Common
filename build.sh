@@ -14,11 +14,23 @@ do
 	fi
 done
 
-echo "Building projects"
+echo "Building projects: "
 for project in $projects 
 do
 	echo "Build for $project"
 	dotnet build $project
+	
+	if [ $? -ne 0 ]; then
+		exit $?
+	fi
+done
+
+testprojects=$(find `pwd` -regex .*\.Tests\..*\.csproj$)
+echo "Runnings Tests:"
+for project in $testprojects 
+do
+	echo "Build for $project"
+	dotnet test $project
 	
 	if [ $? -ne 0 ]; then
 		exit $?
