@@ -1,7 +1,9 @@
 #!/bin/bash
-echo "Tags detected $TRAVIS_TAG running deployment"
+
+echo "Begin deployment execution"
 
 if [ "$TRAVIS_TAG" != "" ]; then
+	echo "Tags detected '$TRAVIS_TAG' ... running deployment"
 
 	echo "Running deployment"
 

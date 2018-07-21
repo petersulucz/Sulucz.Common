@@ -18,10 +18,10 @@ echo "Building projects: "
 for project in $projects 
 do
 	echo "Build for $project"
-	dotnet build $project
+	dotnet build $project /warnaserror
 	
 	if [ $? -ne 0 ]; then
-		exit $?
+		exit 1
 	fi
 done
 
@@ -33,6 +33,6 @@ do
 	dotnet test $project
 	
 	if [ $? -ne 0 ]; then
-		exit $?
+		exit 1
 	fi
 done
