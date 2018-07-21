@@ -1,4 +1,4 @@
-// <copyright file="ExpandableGridTests.cs" company="Peter Sulucz">
+﻿// <copyright file="ExpandableGridTests.cs" company="Peter Sulucz">
 // Copyright (c) Peter Sulucz. All rights reserved.
 // </copyright>
 
