@@ -30,6 +30,8 @@ do
 	fi
 done
 
+echo "Tags: $TRAVIS_TAG"
+
 # Now find all of the nuget packages.
 NugetPackages=$(find `pwd` -regex .*Sulucz\..*.*\.nupkg | grep -v '/obj/')
 for package in $NugetPackages
