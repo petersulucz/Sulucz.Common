@@ -17,3 +17,7 @@ do
 	dotnet build $project
 done
 
+
+
+
+
