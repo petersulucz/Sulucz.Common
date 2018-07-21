@@ -17,9 +17,13 @@ do
 	dotnet build $project
 done
 
-AssemblyVersion="1.0.$TRAVIS_BUILD-NUMBER"
-VersionSuffix=""
+AssemblyVersion="1.0.$TRAVIS_BUILD_NUMBER"
+
+if [ "$(TRAVIS_BRANCH)" != "master"]; then
+	VersionSuffix=""
+else
+	VersionSuffix="$(TRAVIS_PULL_REQUEST_BRANCH)"
+fi
 
 echo "Assembly version $AssemblyVersion"
 echo "Version suffix $VersionSuffix"
-

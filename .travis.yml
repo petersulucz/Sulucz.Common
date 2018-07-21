@@ -2,5 +2,4 @@ language: csharp
 dotnet: 2.0.0
 mono: none
 script:
- - chomod +x build.sh
  - ./build.sh
