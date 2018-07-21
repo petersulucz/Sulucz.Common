@@ -4,6 +4,8 @@
     <ItemGroup>
         <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
         <AdditionalFiles Include="$([System.IO.Path]::Combine($(StylecopDirectory), 'stylecop.json'))" />
-		<None Include="$([System.IO.Path]::Combine($(StylecopDirectory), 'default.ruleset'))" Link="%(Filename)%(Extension)" />
     </ItemGroup>
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>$([System.IO.Path]::Combine($(StylecopDirectory), 'default.ruleset'))</CodeAnalysisRuleSet>
+    </PropertyGroup>
 </Project>
