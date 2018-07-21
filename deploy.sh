@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 if [ "$TRAVIS_BUILD_NUMBER" == "" ]; then
 	TRAVIS_BUILD_NUMBER=0
