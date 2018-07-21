@@ -17,7 +17,9 @@ do
 	dotnet build $project
 done
 
+AssemblyVersion="1.0.$TRAVIS_BUILD-NUMBER"
+VersionSuffix=""
 
-
-
+echo "Assembly version $AssemblyVersion"
+echo "Version suffix $VersionSuffix"
 
