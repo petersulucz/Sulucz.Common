@@ -14,7 +14,7 @@ echo "Version suffix $VersionSuffix"
 NugetProjectFolders=$(find `pwd` -regex .*.*\.nuspec | grep -v '/obj/' | grep -v '/bin/')
 for project in $NugetProjectFolders
 do
-	nuget pack --version-suffix "'$VersionSuffix'" /p:version=$AssemblyVersion
+	nuget pack --version-suffix "$VersionSuffix" /p:version=$AssemblyVersion
 done
 
 # Now find all of the nuget packages.
