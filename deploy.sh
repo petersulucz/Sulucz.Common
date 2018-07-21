@@ -14,7 +14,7 @@ echo "Version suffix $VersionSuffix"
 NugetProjectFolders=$(find `pwd` -regex .*.*\.nuspec | grep -v '/obj/' | grep -v '/bin/')
 for project in $NugetProjectFolders
 do
-	dotnet pack --version-suffix "$VersionSuffix" /p:version=$AssemblyVersion $project
+	dotnet pack --version-suffix "'$VersionSuffix'" /p:version=$AssemblyVersion $project
 	if [ $? -ne 0 ]; then
 		exit $?
 	fi
