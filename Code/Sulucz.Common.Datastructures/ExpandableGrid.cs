@@ -80,6 +80,39 @@ namespace Sulucz.Common.Datastructures
             }
         }
 
+        /// <summary>
+        /// Removes the item at the row and column.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <param name="column">The column.</param>
+        /// <returns>True if the item was removed. False otherwise.</returns>
+        public bool RemoveValue(int row, int column)
+        {
+            Dictionary<int, T> columns;
+            if (true == this.rows.TryGetValue(row, out columns))
+            {
+                var removed = columns.Remove(column);
+
+                // Cleanup the column if we don't need it.
+                if (0 == columns.Count)
+                {
+                    this.rows.Remove(row);
+                }
+
+                return removed;
+            }
+
+            // The row didn't exist.
+            return false;
+        }
+
+        /// <summary>
+        /// Try to get a value.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <param name="column">The column.</param>
+        /// <param name="value">The value.</param>
+        /// <returns>True if the value exists. False otherwise and value is the default.</returns>
         public bool TryGetValue(int row, int column, out T value)
         {
             Dictionary<int, T> columns;
@@ -92,5 +125,7 @@ namespace Sulucz.Common.Datastructures
             value = default(T);
             return false;
         }
+
+
     }
 }
