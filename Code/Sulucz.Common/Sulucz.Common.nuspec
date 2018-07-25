@@ -4,11 +4,11 @@
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <authors>Peter Sulucz</authors>
+    <owners>Peter Sulucz</owners>
     <licenseUrl>https://raw.githubusercontent.com/petersulucz/Sulucz.Common/master/LICENSE</licenseUrl>
     <projectUrl>https://www.badflyer.com</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <iconUrl></iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>

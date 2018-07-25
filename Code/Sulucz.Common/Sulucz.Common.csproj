@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Peter Sulucz</Authors>
+    <Company>Peter Sulucz</Company>
+    <Description>This is the common utilities nuget package.</Description>
   </PropertyGroup>
 
   <ItemGroup>

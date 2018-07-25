@@ -125,7 +125,5 @@ namespace Sulucz.Common.Datastructures
             value = default(T);
             return false;
         }
-
-
     }
 }
