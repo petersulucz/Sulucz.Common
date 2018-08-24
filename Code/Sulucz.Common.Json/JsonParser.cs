@@ -8,7 +8,7 @@ namespace Sulucz.Common.Json
     using System.Text;
     using Sulucz.Common.Json.Internal;
 
-    public class JsonParser
+    internal class JsonParser
     {
         private readonly Stream stream;
         private readonly StreamReader reader;

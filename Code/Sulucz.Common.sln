@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulucz.Common.Datastructure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulucz.Common.Datastructures.Tests", "..\Test\Sulucz.Common.Datastructures.Tests\Sulucz.Common.Datastructures.Tests.csproj", "{1FC99272-D728-4309-B6CB-D81ABFCB7847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulucz.Common.Json", "Sulucz.Common.Json\Sulucz.Common.Json.csproj", "{5D1F0FB4-F763-4745-9A79-2AE474555A07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulucz.Common.Json", "Sulucz.Common.Json\Sulucz.Common.Json.csproj", "{5D1F0FB4-F763-4745-9A79-2AE474555A07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulucz.Common.Json.Tests", "..\Test\Sulucz.Common.Json.Tests\Sulucz.Common.Json.Tests.csproj", "{351B5FDC-A3B7-4F1D-8A67-48BD2808E153}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulucz.Common.Json.Tests", "..\Test\Sulucz.Common.Json.Tests\Sulucz.Common.Json.Tests.csproj", "{351B5FDC-A3B7-4F1D-8A67-48BD2808E153}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
