@@ -4,8 +4,8 @@
 
 namespace Sulucz.Common.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System.Collections.Generic;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
     /// The list extensions tests.
@@ -20,7 +20,7 @@ namespace Sulucz.Common.Tests
         public void TestAsReadonly()
         {
             var testList = new[] { 1, 2, 3, 4, 5 };
-            var @readonlyList = testList.ToReadonlyCollection();
+            var @readonlyList = testList.ToReadOnlyCollection();
 
             var k = 0;
             foreach (var i in readonlyList)
@@ -37,7 +37,7 @@ namespace Sulucz.Common.Tests
         {
             var readonlyList = new List<int> { 1, 2, 3, 4, 5 };
 
-            Assert.AreSame(readonlyList, readonlyList.ToReadonlyCollection());
+            Assert.AreSame(readonlyList, readonlyList.ToReadOnlyCollection());
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Sulucz.Common.Tests
             }
 
             var items = Items();
-            Assert.AreNotSame(items, items.ToReadonlyCollection());
+            Assert.AreNotSame(items, items.ToReadOnlyCollection());
         }
     }
 }

@@ -8,9 +8,8 @@
     <owners>$author$</owners>
     <licenseUrl>https://raw.githubusercontent.com/petersulucz/Sulucz.Common/master/LICENSE</licenseUrl>
     <projectUrl>https://www.badflyer.com</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A bunch of common functions.</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Common Structures</tags>

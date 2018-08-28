@@ -19,7 +19,7 @@ namespace Sulucz.Common
         /// <typeparam name="T">The type of the collection.</typeparam>
         /// <param name="self">The enumerable.</param>
         /// <returns>The readonly collection.</returns>
-        public static IReadOnlyCollection<T> ToReadonlyCollection<T>(this IEnumerable<T> self)
+        public static IReadOnlyCollection<T> ToReadOnlyCollection<T>(this IEnumerable<T> self)
         {
             if (self is IReadOnlyCollection<T> already)
             {
